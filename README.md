@@ -2,6 +2,20 @@
   <img src="./terminal.gif" width="960" alt="Mark Quispe Gonzales, estudiante de Computación Científica en la UNMSM. Retrato ASCII animado.">
 </p>
 
+<a href="https://github.com/mark-quispe#contributions">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg">
+    <img align="left" width="45%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub de Mark Quispe">
+  </picture>
+</a>
+<a href="https://github.com/mark-quispe?tab=repositories">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg">
+    <img align="right" width="45%" src="./cards/languages-light.svg" alt="Lenguajes por repositorio público">
+  </picture>
+</a>
+<br clear="all">
+
 ## Proyectos destacados
 
 ### Aplicaciones
