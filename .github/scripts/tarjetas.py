@@ -177,7 +177,7 @@ for item in recientes[:4]:
     commits = item["contributions"]["totalCount"]
     detalle = (f'{repo["primaryLanguage"]["name"]} · {commits} {"commits míos" if commits != 1 else "commit mío"}'
                f' · último cambio {int(day)} {MESES[int(month) - 1]} {year}')
-    lineas.append(f'- **[{repo["name"]}]({repo["url"]})** <sub>{detalle}</sub>')
+    lineas.append(f'- **[{repo["name"]}]({repo["url"]})** <sub>{detalle}</sub><br>')
     if repo["description"]:
         descripcion = repo["description"].strip()
         if len(descripcion) > 120:
