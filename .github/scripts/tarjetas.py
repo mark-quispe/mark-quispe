@@ -23,6 +23,13 @@ query($login: String!, $after: String) {
       restrictedContributionsCount
       totalPullRequestContributions
       totalRepositoriesWithContributedCommits
+      commitContributionsByRepository(maxRepositories: 25) {
+        contributions { totalCount }
+        repository {
+          nameWithOwner name url description pushedAt isPrivate isFork
+          primaryLanguage { name }
+        }
+      }
     }
     repositories(first: 100, after: $after, ownerAffiliations: OWNER, isFork: false) {
       totalCount
@@ -146,3 +153,42 @@ for name, data in generated.items():
     (folder / name).write_bytes(data)
 
 print(f"Repositorios: {len(repos)} ({alcance}) · lenguajes: {dict(entries)}")
+
+# --- Sección "Actividad reciente" del README ---------------------------------
+# Repos públicos (propios o de organizaciones) con commits míos en el último año,
+# ordenados por el último push. Se excluyen privados, forks, el repo del perfil y
+# repos sin código.
+MESES = "ene feb mar abr may jun jul ago sep oct nov dic".split()
+INICIO, FIN = "<!-- recientes:inicio -->", "<!-- recientes:fin -->"
+
+recientes = [
+    item for item in contrib["commitContributionsByRepository"]
+    if not item["repository"]["isPrivate"]
+    and not item["repository"]["isFork"]
+    and item["repository"]["primaryLanguage"]
+    and item["repository"]["nameWithOwner"].lower() != f"{PROFILE}/{PROFILE}".lower()
+]
+recientes.sort(key=lambda item: item["repository"]["pushedAt"], reverse=True)
+
+lineas = []
+for item in recientes[:4]:
+    repo = item["repository"]
+    year, month, day = repo["pushedAt"][:10].split("-")
+    commits = item["contributions"]["totalCount"]
+    detalle = (f'{repo["primaryLanguage"]["name"]} · {commits} {"commits míos" if commits != 1 else "commit mío"}'
+               f' · último cambio {int(day)} {MESES[int(month) - 1]} {year}')
+    lineas.append(f'- **[{repo["name"]}]({repo["url"]})** <sub>{detalle}</sub>')
+    if repo["description"]:
+        descripcion = repo["description"].strip()
+        if len(descripcion) > 120:
+            descripcion = descripcion[:120].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
+        lineas.append(f"  {descripcion}")
+
+readme = Path("README.md")
+texto = readme.read_text(encoding="utf-8")
+if lineas and INICIO in texto and FIN in texto:
+    antes, resto = texto.split(INICIO, 1)
+    _, despues = resto.split(FIN, 1)
+    readme.write_text(f"{antes}{INICIO}\n" + "\n".join(lineas) + f"\n{FIN}{despues}",
+                      encoding="utf-8", newline="\n")
+    print(f"Actividad reciente: {[item['repository']['name'] for item in recientes[:4]]}")

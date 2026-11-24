@@ -57,10 +57,35 @@ Guarda fragmentos de las respuestas de Claude como notas, por proyecto y tema.<b
 </tr>
 </table>
 
+## Actividad reciente
+
+<!-- recientes:inicio -->
+- **[Academic-Search-RAG](https://github.com/mark-quispe/Academic-Search-RAG)** <sub>Python · 6 commits míos · último cambio 24 nov 2026</sub>
+  Asistente académico basado en RAG y LLM que permite identificar cursos, ciclos y carreras a partir de consultas en…
+- **[claude-plan-limits](https://github.com/Gonriel-Labs/claude-plan-limits)** <sub>TypeScript · 14 commits míos · último cambio 23 nov 2026</sub>
+  Barra de límites del plan (5h y semanal), tokens y costo para Claude Code
+- **[claude-demo-recorder](https://github.com/mark-quispe/claude-demo-recorder)** <sub>Python · 1 commit mío · último cambio 20 nov 2026</sub>
+  Graba en video a Claude haciendo una tarea en tu pantalla de Windows, con subtítulos, lista de pasos y cada clic…
+- **[claude-chat-notes](https://github.com/Gonriel-Labs/claude-chat-notes)** <sub>TypeScript · 10 commits míos · último cambio 20 nov 2026</sub>
+  Notas del chat en un panel para Claude Code: guarda lo que resaltas y ordénalo por tema con Haiku
+<!-- recientes:fin -->
+
 ## Herramientas y aprendizaje
 
-`Python` · `Git` · `LaTeX` · `PostgreSQL` · `Neon` · `Vercel` · `Google Cloud`
+<img src="https://img.shields.io/badge/Python-datos-3776AB?logo=python&logoColor=white" alt="Python: datos">
+<img src="https://img.shields.io/badge/TypeScript-web-3178C6?logo=typescript&logoColor=white" alt="TypeScript: web">
+<img src="https://img.shields.io/badge/PostgreSQL-base%20de%20datos-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL: base de datos">
+<img src="https://img.shields.io/badge/Neon-Postgres%20en%20la%20nube-00B37E?logo=neon&logoColor=white" alt="Neon: Postgres en la nube">
+<img src="https://img.shields.io/badge/Vercel-despliegue-000000?logo=vercel&logoColor=white" alt="Vercel: despliegue">
+<img src="https://img.shields.io/badge/Google%20Cloud-nube-4285F4?logo=googlecloud&logoColor=white" alt="Google Cloud: nube">
+<img src="https://img.shields.io/badge/Git-versiones-F05032?logo=git&logoColor=white" alt="Git: control de versiones">
+<img src="https://img.shields.io/badge/LaTeX-tesis-008080?logo=latex&logoColor=white" alt="LaTeX: tesis">
 
 Estoy reforzando **Python y SQL** para trabajar con datos. En mi tesis, estudio cómo los retrasos en las intervenciones cambian la evolución del contagio financiero y las estrategias de control.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mark-quispe/mark-quispe/output/serpiente-dark.svg">
+  <img width="100%" src="https://raw.githubusercontent.com/mark-quispe/mark-quispe/output/serpiente-light.svg" alt="Serpiente animada que recorre mi gráfico de contribuciones del último año">
+</picture>
 
 [LinkedIn](https://www.linkedin.com/in/mark-quispe-gonzales-839200382/) · [Contribuciones en GitHub](https://github.com/mark-quispe#contributions)
