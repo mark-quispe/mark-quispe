@@ -60,13 +60,13 @@ Guarda fragmentos de las respuestas de Claude como notas, por proyecto y tema.<b
 ## Actividad reciente
 
 <!-- recientes:inicio -->
-- **[Academic-Search-RAG](https://github.com/mark-quispe/Academic-Search-RAG)** <sub>Python · 6 commits míos · último cambio 24 nov 2026</sub>
+- **[Academic-Search-RAG](https://github.com/mark-quispe/Academic-Search-RAG)** <sub>Python · 6 commits míos · último cambio 24 nov 2026</sub><br>
   Asistente académico basado en RAG y LLM que permite identificar cursos, ciclos y carreras a partir de consultas en…
-- **[claude-plan-limits](https://github.com/Gonriel-Labs/claude-plan-limits)** <sub>TypeScript · 14 commits míos · último cambio 23 nov 2026</sub>
+- **[claude-plan-limits](https://github.com/Gonriel-Labs/claude-plan-limits)** <sub>TypeScript · 14 commits míos · último cambio 23 nov 2026</sub><br>
   Barra de límites del plan (5h y semanal), tokens y costo para Claude Code
-- **[claude-demo-recorder](https://github.com/mark-quispe/claude-demo-recorder)** <sub>Python · 1 commit mío · último cambio 20 nov 2026</sub>
+- **[claude-demo-recorder](https://github.com/mark-quispe/claude-demo-recorder)** <sub>Python · 1 commit mío · último cambio 20 nov 2026</sub><br>
   Graba en video a Claude haciendo una tarea en tu pantalla de Windows, con subtítulos, lista de pasos y cada clic…
-- **[claude-chat-notes](https://github.com/Gonriel-Labs/claude-chat-notes)** <sub>TypeScript · 10 commits míos · último cambio 20 nov 2026</sub>
+- **[claude-chat-notes](https://github.com/Gonriel-Labs/claude-chat-notes)** <sub>TypeScript · 10 commits míos · último cambio 20 nov 2026</sub><br>
   Notas del chat en un panel para Claude Code: guarda lo que resaltas y ordénalo por tema con Haiku
 <!-- recientes:fin -->
 
