@@ -1,3 +1,67 @@
+name: Actualizar tarjetas del perfil
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 12 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tarjetas-del-perfil
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerar tarjetas
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE: ${{ github.repository_owner }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from collections import Counter
+          from pathlib import Path
+          from urllib.parse import quote, urlencode
+          from urllib.request import Request, urlopen
+          from xml.etree import ElementTree as ET
+          from xml.sax.saxutils import escape
+
+          profile = quote(os.environ["PROFILE"], safe="")
+          counts = Counter()
+          page = 1
+          while True:
+              url = f"https://api.github.com/users/{profile}/repos?type=owner&per_page=100&page={page}"
+              request = Request(url, headers={
+                  "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                  "Accept": "application/vnd.github+json",
+              })
+              with urlopen(request, timeout=30) as response:
+                  repos = json.load(response)
+              counts.update(repo["language"] for repo in repos
+                            if not repo["private"] and repo["language"])
+              if len(repos) < 100:
+                  break
+              page += 1
+
+          colors = ["#3572a5", "#98a8eb", "#e5bd60", "#70b79c", "#d58da0", "#8694a6"]
+          total = sum(counts.values())
+          entries = counts.most_common(5)
+          if len(counts) > 5:
+              entries.append(("Otros", total - sum(count for _, count in entries)))
+
+          generated = {}
+          for theme, purple, text, icon in [
+              ("dark", "a98ff7", "c9d1d9", "7ccdf2"),
+              ("light", "6443a5", "303742", "397b9b"),
+          ]:
+              params = urlencode({
+                  "username": os.environ["PROFILE"], "show_icons": "true",
                   "rank_icon": "github", "hide_border": "true",
                   "bg_color": "00000000", "title_color": purple,
                   "text_color": text, "icon_color": icon, "card_width": "400",
@@ -53,3 +117,6 @@
           git commit -m 'Actualizar tarjetas del perfil'
           git pull --rebase
           git push
+
+
+
