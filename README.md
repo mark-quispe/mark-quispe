@@ -1,46 +1,6 @@
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&height=180&color=0d1117&text=MARK%20QUISPE&fontColor=7ee787&fontSize=48&fontAlignY=44&desc=COMPUTACI%C3%93N%20CIENT%C3%8DFICA%20%2F%20UNMSM&descSize=16&descAlignY=69" alt="Mark Quispe · Computación Científica · UNMSM">
+  <img src="./terminal.gif" width="960" alt="Mark Quispe Gonzales, estudiante de Computación Científica en la UNMSM. Busco prácticas preprofesionales. Retrato ASCII animado.">
 </p>
-
-```text
-mark@github:~$ whoami
-Mark Quispe Gonzales | Lima, Perú
-Computación Científica · UNMSM
-Busco prácticas preprofesionales.
-
-mark@github:~$ cat retrato.ascii
- -#%%%@*  -*:                                   :#%: .= +@%%@+.
-.#%%%%%: :*. ...                             .=. .+@= :=-@%@@#-.
-:#%%%%* *+ .=:-  :+.   .  .          .   -.   =%=  +@= ==%%%%%*:
--%%%%@+:@::%-=. -%-   =- .=          -.  +* : .%@+ .%%.-*##%%%#:
-=%%%%%#=# #%-+ -@#   =#- ++   . .   .==. =%+-: #@@+ *@-+#%@@%@#.
-:%%%%%%##-%%*=.#@*  +@%=.**.  ..=.  -=#- *#%*- *@%@:+%*%@@%@@@#:   .
-.#%%%%%%%**%#+:%%% :%#%*:**+  -:=: .+**. #%%*=.%@%%=#@%%%%%@@@#.   =
-.*%%%%%@@#*#%#-**#:=#*+#-##*- -:*- :#++:-@%*+-=#*#*#@%%@@@@@@@#:...+
-**%%%%#**%@@@@*###++#**##*@#+ -+#+ **+#-%%*=*+#%@@@%*+=++*###%%#%*:+
-%%+::..  .-=##%%@@@@@@%@@%%@#=:+%*-*+@##@%%%%%%#*+-. .   ...+#@@%*+%
-*%%+:  ...... :----====-+#%@@+==%+**%%%*=-----:..... ...::-#@@%@#*%*
-*#%%%#+::-:-:::...........=++*-=#=+*-:.. :......  .-==++.-%@%%@%#*=+
-*#%%%%@*..:-====-----:..:..:-=:=+--=  ....:-==++-=#@@@@-:%%%@@@@%**@
-+##%%%%%+::::::::::--::-+-:##=*#***=*#+--:=+*%%@@@%#*=::%@%@@@@%#-**
-:*##%%%%@%*+=+++=++**====+%@@#%@@@%%@@@#*=---------:--+%@@@@@@@@+--@
-+-####%%%%%%####**###%#%%@@@@@@%%%@@%%%@@%##%%%%#%%%@@@@@%@@@@%%=*=@
-++=###%%%%%@@@@@@@@@@@@@@%@@@%%@@@@%%%%%%%@%@@@@@@@@@@@@@%#%@%%*+*+@
--%-*#*%%%%%%%%%%%%%%@@@@@%@@%%%%%%%%@%@@@%%%@@%@@@@%@@@@%@**@#%-#+#@
-:%#:*##%%%%%%%%%%@@@%%@@@@@@%%%#*#%%%%%@@@%%@@%%%@@@@@@%%@%=#%==@=-=
--+@*:###%%%%%%%%%%@@%%@@%%%%%@@@@@%%%%@%%@%%%@@%%%@%%@@%@%%+#==@%:
- =%@*:*##%%%%%%%%%%%%@%%%%*+%%%%%%%%%#+##%%%%%%%%%%%#*#@%%#*-=@@*.
- -#%%+:+###%#=##%%%%%%%%@%*@%%%%%%%%%@#%@%%%%%%%%@@%*-*%###--%@#*.
- :*%%%*-=**#*:-*%@@%%%%%%%*+%@%%%%%@@**%%%%%%%@@@#++#%##**--#@%#+
- .*#%%%#=:+***=:.=%@@@@@%%@-:#@@@@%#=-%@@@@@@@%*-:+*****+:=*#*=:.
- .++*%@%#+:=****+..-+##%%@%#=--++=--=####****+: -*++***=:--:.
-    .-+##**--++*+*: :==+==*+=++=:=**==**=+*+*::+*=+++=:
-        :-==-.=*+*++-.=*#*%%*%@%*%@%+%@**%=+=-*+:-:..
-            ...-***=*+-:=*+#*+%%+*%#=**==---.:.
-                .-=--+*=:.........:.......
-
-mark@github:~$ ls proyectos/
-```
 
 ### Proyectos destacados
 
@@ -56,12 +16,4 @@ mark@github:~$ ls proyectos/
 
 Estoy reforzando **Python y SQL** para trabajar con datos. En mi tesis, estudio cómo los retrasos en las intervenciones cambian la evolución del contagio financiero y las estrategias de control.
 
-### Actividad en GitHub
-
-<p align="center">
-  <a href="https://github.com/mark-quispe#contributions">
-    <img width="100%" src="https://ghchart.rshah.org/39d353/mark-quispe" alt="Calendario de contribuciones públicas de mark-quispe">
-  </a>
-</p>
-
-[LinkedIn](https://www.linkedin.com/in/mark-quispe-gonzales-839200382/)
+[LinkedIn](https://www.linkedin.com/in/mark-quispe-gonzales-839200382/) · [Contribuciones en GitHub](https://github.com/mark-quispe#contributions)
