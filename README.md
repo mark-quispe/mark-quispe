@@ -2,15 +2,25 @@
   <img src="./terminal.gif" width="960" alt="Mark Quispe Gonzales, estudiante de Computación Científica en la UNMSM. Retrato ASCII animado.">
 </p>
 
-### Proyectos destacados
+## Proyectos destacados
 
-| Proyecto | Qué hace |
-| --- | --- |
-| [Academic Search RAG](https://github.com/mark-quispe/Academic-Search-RAG) | API grupal en FastAPI para consultar mallas curriculares de la UNMSM con citas al documento oficial y a la página. |
-| [LexiSoar](https://github.com/mark-quispe/Lexisoar) | Aplicación web para practicar inglés con historias, ejercicios y seguimiento del progreso. |
-| [Claude Demo Recorder](https://github.com/mark-quispe/claude-demo-recorder) | Plugin para Windows que graba demos de Claude Code con subtítulos, pasos y un indicador de clics. |
+### Aplicaciones
 
-### Herramientas y aprendizaje
+- **[Academic Search RAG](https://github.com/mark-quispe/Academic-Search-RAG)**  
+  API grupal en FastAPI para consultar las mallas curriculares de la UNMSM. Cada respuesta cita el documento oficial y la página correspondiente.
+
+- **[Gestión de Pedidos](https://github.com/mark-quispe/GESTION-PEDIDOS)**  
+  Sistema web en desarrollo para registrar y consultar los pedidos de un estudio de arquitectura.
+
+### Herramientas para Claude Code
+
+- **[Claude Plan Limits](https://github.com/Gonriel-Labs/claude-plan-limits)**  
+  Muestra cuánto del plan has usado, cuándo se reinician los límites y el costo equivalente de los tokens de la sesión.
+
+- **[Claude Chat Notes](https://github.com/Gonriel-Labs/claude-chat-notes)**  
+  Guarda fragmentos de las respuestas de Claude como notas y los organiza por proyecto y tema.
+
+## Herramientas y aprendizaje
 
 `Python` · `Git` · `LaTeX` · `PostgreSQL` · `Neon` · `Vercel` · `Google Cloud`
 
