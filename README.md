@@ -5,13 +5,13 @@
 <a href="https://github.com/mark-quispe#contributions">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg">
-    <img align="left" width="45%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub de Mark Quispe">
+    <img align="left" width="45%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub de Mark Quispe: commits, pull requests y repositorios">
   </picture>
 </a>
 <a href="https://github.com/mark-quispe?tab=repositories">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg">
-    <img align="right" width="45%" src="./cards/languages-light.svg" alt="Lenguajes por repositorio público">
+    <img align="right" width="45%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios">
   </picture>
 </a>
 <br clear="all">
