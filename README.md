@@ -18,21 +18,44 @@
 
 ## Proyectos destacados
 
-### Aplicaciones
+<table>
+<tr>
+<th width="50%">Aplicaciones</th>
+<th width="50%">Herramientas para Claude Code</th>
+</tr>
+<tr valign="top">
+<td>
 
-- **[Academic Search RAG](https://github.com/mark-quispe/Academic-Search-RAG)**  
-  API grupal en FastAPI para consultar las mallas curriculares de la UNMSM. Cada respuesta cita el documento oficial y la página correspondiente.
+**[Academic Search RAG](https://github.com/mark-quispe/Academic-Search-RAG)**<br>
+API grupal para consultar las mallas curriculares de la UNMSM, citando documento y página.<br>
+<sub>Python · FastAPI · RAG</sub>
 
-- **[Gestión de Pedidos](https://github.com/mark-quispe/GESTION-PEDIDOS)**  
-  Sistema web en desarrollo para registrar y consultar los pedidos de un estudio de arquitectura.
+</td>
+<td>
 
-### Herramientas para Claude Code
+**[Claude Plan Limits](https://github.com/Gonriel-Labs/claude-plan-limits)**<br>
+Cuánto del plan has usado, cuándo se reinicia y el costo equivalente de la sesión.<br>
+<sub>Plugin de Claude Code</sub>
 
-- **[Claude Plan Limits](https://github.com/Gonriel-Labs/claude-plan-limits)**  
-  Muestra cuánto del plan has usado, cuándo se reinician los límites y el costo equivalente de los tokens de la sesión.
+</td>
+</tr>
+<tr valign="top">
+<td>
 
-- **[Claude Chat Notes](https://github.com/Gonriel-Labs/claude-chat-notes)**  
-  Guarda fragmentos de las respuestas de Claude como notas y los organiza por proyecto y tema.
+**[Gestión de Pedidos](https://github.com/mark-quispe/GESTION-PEDIDOS)** `en desarrollo`<br>
+Registro y consulta de pedidos para un estudio de arquitectura.<br>
+<sub>Web · PostgreSQL</sub>
+
+</td>
+<td>
+
+**[Claude Chat Notes](https://github.com/Gonriel-Labs/claude-chat-notes)**<br>
+Guarda fragmentos de las respuestas de Claude como notas, por proyecto y tema.<br>
+<sub>Plugin de Claude Code</sub>
+
+</td>
+</tr>
+</table>
 
 ## Herramientas y aprendizaje
 
