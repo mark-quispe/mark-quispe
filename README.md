@@ -72,14 +72,7 @@ Guarda fragmentos de las respuestas de Claude como notas, por proyecto y tema.<b
 
 ## Herramientas y aprendizaje
 
-<img src="https://img.shields.io/badge/Python-datos-3776AB?logo=python&logoColor=white" alt="Python: datos">
-<img src="https://img.shields.io/badge/TypeScript-web-3178C6?logo=typescript&logoColor=white" alt="TypeScript: web">
-<img src="https://img.shields.io/badge/PostgreSQL-base%20de%20datos-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL: base de datos">
-<img src="https://img.shields.io/badge/Neon-Postgres%20en%20la%20nube-00B37E?logo=neon&logoColor=white" alt="Neon: Postgres en la nube">
-<img src="https://img.shields.io/badge/Vercel-despliegue-000000?logo=vercel&logoColor=white" alt="Vercel: despliegue">
-<img src="https://img.shields.io/badge/Google%20Cloud-nube-4285F4?logo=googlecloud&logoColor=white" alt="Google Cloud: nube">
-<img src="https://img.shields.io/badge/Git-versiones-F05032?logo=git&logoColor=white" alt="Git: control de versiones">
-<img src="https://img.shields.io/badge/LaTeX-tesis-008080?logo=latex&logoColor=white" alt="LaTeX: tesis">
+<p><img src="https://img.shields.io/badge/Python-datos-3776AB?logo=python&logoColor=white" alt="Python: datos"> <img src="https://img.shields.io/badge/TypeScript-web-3178C6?logo=typescript&logoColor=white" alt="TypeScript: web"> <img src="https://img.shields.io/badge/PostgreSQL-base%20de%20datos-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL: base de datos"> <img src="https://img.shields.io/badge/Neon-Postgres%20en%20la%20nube-00B37E?logo=neon&logoColor=white" alt="Neon: Postgres en la nube"> <img src="https://img.shields.io/badge/Vercel-despliegue-000000?logo=vercel&logoColor=white" alt="Vercel: despliegue"> <img src="https://img.shields.io/badge/Google%20Cloud-nube-4285F4?logo=googlecloud&logoColor=white" alt="Google Cloud: nube"> <img src="https://img.shields.io/badge/Git-versiones-F05032?logo=git&logoColor=white" alt="Git: control de versiones"> <img src="https://img.shields.io/badge/LaTeX-tesis-008080?logo=latex&logoColor=white" alt="LaTeX: tesis"></p>
 
 Estoy reforzando **Python y SQL** para trabajar con datos. En mi tesis, estudio cómo los retrasos en las intervenciones cambian la evolución del contagio financiero y las estrategias de control.
 
