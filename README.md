@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./terminal.gif" width="960" alt="Mark Quispe Gonzales, estudiante de Computación Científica en la UNMSM. Busco prácticas preprofesionales. Retrato ASCII animado.">
+  <img src="./terminal.gif" width="960" alt="Mark Quispe Gonzales, estudiante de Computación Científica en la UNMSM. Retrato ASCII animado.">
 </p>
 
 ### Proyectos destacados
