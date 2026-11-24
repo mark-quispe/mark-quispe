@@ -4,9 +4,42 @@
 
 ```text
 mark@github:~$ whoami
-Mark Quispe Gonzales · Lima, Perú
-Estudiante de Computación Científica en la UNMSM.
-Actualmente busco prácticas preprofesionales.
+Mark Quispe Gonzales | Lima, Perú
+Computación Científica · UNMSM
+Busco prácticas preprofesionales.
+
+mark@github:~$ cat retrato.ascii
+ -#%%%@*  -*:                                   :#%: .= +@%%@+.
+.#%%%%%: :*. ...                             .=. .+@= :=-@%@@#-.
+:#%%%%* *+ .=:-  :+.   .  .          .   -.   =%=  +@= ==%%%%%*:
+-%%%%@+:@::%-=. -%-   =- .=          -.  +* : .%@+ .%%.-*##%%%#:
+=%%%%%#=# #%-+ -@#   =#- ++   . .   .==. =%+-: #@@+ *@-+#%@@%@#.
+:%%%%%%##-%%*=.#@*  +@%=.**.  ..=.  -=#- *#%*- *@%@:+%*%@@%@@@#:   .
+.#%%%%%%%**%#+:%%% :%#%*:**+  -:=: .+**. #%%*=.%@%%=#@%%%%%@@@#.   =
+.*%%%%%@@#*#%#-**#:=#*+#-##*- -:*- :#++:-@%*+-=#*#*#@%%@@@@@@@#:...+
+**%%%%#**%@@@@*###++#**##*@#+ -+#+ **+#-%%*=*+#%@@@%*+=++*###%%#%*:+
+%%+::..  .-=##%%@@@@@@%@@%%@#=:+%*-*+@##@%%%%%%#*+-. .   ...+#@@%*+%
+*%%+:  ...... :----====-+#%@@+==%+**%%%*=-----:..... ...::-#@@%@#*%*
+*#%%%#+::-:-:::...........=++*-=#=+*-:.. :......  .-==++.-%@%%@%#*=+
+*#%%%%@*..:-====-----:..:..:-=:=+--=  ....:-==++-=#@@@@-:%%%@@@@%**@
++##%%%%%+::::::::::--::-+-:##=*#***=*#+--:=+*%%@@@%#*=::%@%@@@@%#-**
+:*##%%%%@%*+=+++=++**====+%@@#%@@@%%@@@#*=---------:--+%@@@@@@@@+--@
++-####%%%%%%####**###%#%%@@@@@@%%%@@%%%@@%##%%%%#%%%@@@@@%@@@@%%=*=@
+++=###%%%%%@@@@@@@@@@@@@@%@@@%%@@@@%%%%%%%@%@@@@@@@@@@@@@%#%@%%*+*+@
+-%-*#*%%%%%%%%%%%%%%@@@@@%@@%%%%%%%%@%@@@%%%@@%@@@@%@@@@%@**@#%-#+#@
+:%#:*##%%%%%%%%%%@@@%%@@@@@@%%%#*#%%%%%@@@%%@@%%%@@@@@@%%@%=#%==@=-=
+-+@*:###%%%%%%%%%%@@%%@@%%%%%@@@@@%%%%@%%@%%%@@%%%@%%@@%@%%+#==@%:
+ =%@*:*##%%%%%%%%%%%%@%%%%*+%%%%%%%%%#+##%%%%%%%%%%%#*#@%%#*-=@@*.
+ -#%%+:+###%#=##%%%%%%%%@%*@%%%%%%%%%@#%@%%%%%%%%@@%*-*%###--%@#*.
+ :*%%%*-=**#*:-*%@@%%%%%%%*+%@%%%%%@@**%%%%%%%@@@#++#%##**--#@%#+
+ .*#%%%#=:+***=:.=%@@@@@%%@-:#@@@@%#=-%@@@@@@@%*-:+*****+:=*#*=:.
+ .++*%@%#+:=****+..-+##%%@%#=--++=--=####****+: -*++***=:--:.
+    .-+##**--++*+*: :==+==*+=++=:=**==**=+*+*::+*=+++=:
+        :-==-.=*+*++-.=*#*%%*%@%*%@%+%@**%=+=-*+:-:..
+            ...-***=*+-:=*+#*+%%+*%#=**==---.:.
+                .-=--+*=:.........:.......
+
+mark@github:~$ ls proyectos/
 ```
 
 ### Proyectos destacados
@@ -17,11 +50,11 @@ Actualmente busco prácticas preprofesionales.
 | [LexiSoar](https://github.com/mark-quispe/Lexisoar) | Aplicación web para practicar inglés con historias, ejercicios y seguimiento del progreso. |
 | [Claude Demo Recorder](https://github.com/mark-quispe/claude-demo-recorder) | Plugin para Windows que graba demos de Claude Code con subtítulos, pasos y un indicador de clics. |
 
-### Herramientas
+### Herramientas y aprendizaje
 
 `Python` · `Git` · `LaTeX` · `PostgreSQL` · `Neon` · `Vercel` · `Google Cloud`
 
-**Ahora:** refuerzo Python y SQL y trabajo en mi tesis sobre modelado y control óptimo del contagio financiero con retardo.
+Estoy reforzando **Python y SQL** para trabajar con datos. En mi tesis, estudio cómo los retrasos en las intervenciones cambian la evolución del contagio financiero y las estrategias de control.
 
 ### Actividad en GitHub
 
