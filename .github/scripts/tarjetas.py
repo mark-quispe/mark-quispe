@@ -144,7 +144,7 @@ def tarjeta_stats(t):
 
 
 def tarjeta_lenguajes(t):
-    tonos = {nombre: COLORES_LENGUAJES[i] for i, (nombre, _) in enumerate(lenguajes)}
+    tonos = tonos_lenguajes()
     W, H = 400, 200
     partes = ['<defs><clipPath id="barra"><rect x="26" y="70" width="348" height="10" rx="5"/></clipPath></defs>'
               '<g clip-path="url(#barra)">']
@@ -263,7 +263,17 @@ def tarjeta_sobre_mi(t):
 
 # Paleta exclusiva de las estadísticas; no modifica las otras piezas del perfil.
 PALETA_ESTADISTICAS = {"dark":{"#15191e":"#1b1e23","#30363d":"#363b42","#eee4d6":"#e5e1da","#c8c4c1":"#c8b89a","#92979e":"#a6a9af","#cc514d":"#bd5357","#c8ad8f":"#bd5357","#21262d":"#21262d","#4a1d1b":"#4a2529","#7a2523":"#73383e","#a52f2b":"#a5464b","#d0453a":"#d26869"},"light":{"#f3f1ed":"#f1efeb","#d0d7de":"#d8d2c8","#29221f":"#342c25","#42464a":"#51493d","#656d76":"#62666c","#a23836":"#a33b43","#84664d":"#a33b43","#ebedf0":"#e8e5e1","#e7b3a6":"#e9bec0","#cf7a6c":"#cb878d","#b0463e":"#ac515a"}}
-COLORES_LENGUAJES = ["#c8b89a","#819b9b","#b58a57","#a194b0","#758aa3","#8f9092"]
+COLORES_LENGUAJES = {"TypeScript":"#c8b89a","Python":"#9b4758","JavaScript":"#b08d57","CSS":"#527d78","PLpgSQL":"#758aa3","Otros":"#8f9092","HTML":"#b98265","SQL":"#a194b0","Shell":"#a63d40","Go":"#73918e","Java":"#b7a078","C++":"#8f829c","C":"#8896a4","Rust":"#a96e50","C#":"#9e8b9c"}
+TONOS_ALTERNATIVOS = ["#b98265", "#a194b0", "#a63d40", "#73918e", "#b7a078", "#8896a4"]
+
+def tonos_lenguajes():
+    tonos = {nombre: COLORES_LENGUAJES[nombre] for nombre, _ in lenguajes
+             if nombre in COLORES_LENGUAJES}
+    disponibles = iter(c for c in TONOS_ALTERNATIVOS if c not in tonos.values())
+    for nombre, _ in sorted(lenguajes):
+        if nombre not in tonos:
+            tonos[nombre] = next(disponibles)
+    return tonos
 
 def paleta_estadisticas(tema, paleta):
     mapa = PALETA_ESTADISTICAS[tema]
