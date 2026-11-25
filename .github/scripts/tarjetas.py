@@ -141,7 +141,7 @@ def tarjeta_stats(t):
     # Line icons: commit history and pull request.
     cuerpo.append(f'<g fill="none" stroke="{t["acento"]}" stroke-width="1.5"><path d="M27 57H47"/><circle cx="37" cy="57" r="4" fill="{t["fondo"]}"/><path d="M218 51V66M218 56Q232 56 232 66"/><circle cx="218" cy="51" r="2.4" fill="{t["fondo"]}"/><circle cx="218" cy="66" r="2.4" fill="{t["fondo"]}"/><circle cx="232" cy="66" r="2.4" fill="{t["fondo"]}"/></g>')
     for x, label, value in [(26, "Commits", estadisticas[0][1]), (215, "Pull requests", estadisticas[1][1])]:
-        cuerpo.append(negrita.path(f"{value:,}".replace(",", " "), x + 30, 85, 37, t["titulo"]))
+        cuerpo.append(negrita.path(f"{value:,}".replace(",", " "), x + 30, 85, 30, t["titulo"]))
         cuerpo.append(serif.path(label, x, 101, 14, t["texto"]))
         cuerpo.append(serif.path("Último año", x, 113, 10.5, t["suave"]))
     for x, value, labels in [
@@ -150,7 +150,7 @@ def tarjeta_stats(t):
         (270, estadisticas[4][1], ("Lenguajes", "usados")),
     ]:
         cuerpo.append(rombo(x+3, 140, 3, t["acento"]))
-        cuerpo.append(negrita.path(f"{value:,}".replace(",", " "), x+13, 152, 27, t["titulo"]))
+        cuerpo.append(negrita.path(f"{value:,}".replace(",", " "), x+13, 152, 23, t["titulo"]))
         cuerpo.append(serif.path(labels[0], x, 169, 13, t["texto"]))
         cuerpo.append(serif.path(labels[1], x, 182, 11.5, t["suave"]))
     return svg(W, H, "Estadísticas de GitHub", "".join(cuerpo))
@@ -330,6 +330,18 @@ for tema in TEMAS:
     ):
         pieza = ET.fromstring((carpeta / f"{nombre}-{tema}.svg").read_text(encoding="utf-8"))
         pieza.attrib.update({"x": str(x), "y": str(y), "width": str(w), "height": str(h), "viewBox": vista, "overflow": "hidden"})
+        if prefijo in ("a-", "s-"):
+            # Sin sombreado rectangular recortado en la fila inferior.
+            for hijo in list(pieza):
+                if hijo.get("fill") == "url(#ambiente)":
+                    pieza.remove(hijo)
+            if tema == "dark":
+                tonos = {"#e5e1da": "#c7c3bd", "#c8b89a": "#b1a288",
+                         "#a6a9af": "#92959c", "#bd5357": "#985054", "#363b42": "#292e34"}
+                for elemento in pieza.iter():
+                    for atributo in ("fill", "stroke"):
+                        if elemento.get(atributo) in tonos:
+                            elemento.set(atributo, tonos[elemento.get(atributo)])
         for elemento in pieza.iter():
             if "id" in elemento.attrib:
                 elemento.set("id", prefijo + elemento.get("id"))
@@ -339,4 +351,4 @@ for tema in TEMAS:
                 elif "url(#" in valor:
                     elemento.set(clave, valor.replace("url(#", "url(#" + prefijo))
         panel.append(pieza)
-    ET.ElementTree(panel).write(carpeta / f"panel-datos-{tema}.svg", encoding="unicode")
+    ET.ElementTree(panel).write(carpeta / f"panel-datos-discreto-{tema}.svg", encoding="unicode")
