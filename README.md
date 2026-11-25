@@ -8,12 +8,17 @@
 
 <p align="center"><sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
 
-<p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_vertical_dark.webp"><img align="left" width="45%" src="./art/proyectos_vertical_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
-  <a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg"><img width="53%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub actualizadas automáticamente"></picture></a><br>
-  <a href="https://github.com/mark-quispe?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg"><img width="53%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios"></picture></a>
-</p>
-<br clear="all">
+<table width="100%">
+  <tr>
+    <td width="45%" valign="top">
+      <picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_vertical_dark.webp"><img width="100%" src="./art/proyectos_vertical_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
+    </td>
+    <td width="55%" valign="top">
+      <a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg"><img width="100%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub actualizadas automáticamente"></picture></a><br>
+      <a href="https://github.com/mark-quispe?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg"><img width="100%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios"></picture></a>
+    </td>
+  </tr>
+</table>
 
 <p>
 <picture>
