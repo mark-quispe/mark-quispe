@@ -298,3 +298,27 @@ for nombre, crear in PIEZAS.items():
 
 print(f"Repositorios: {len(repos)} ({alcance}) · lenguajes: {dict(lenguajes)}")
 print(f"Actividad reciente: {[i['repository']['name'] for i in recientes]}")
+
+
+# Composición vertical para mostrar las dos estadísticas sin una tabla HTML.
+ET.register_namespace("", "http://www.w3.org/2000/svg")
+ns = "{http://www.w3.org/2000/svg}"
+for tema in TEMAS:
+    combinado = ET.Element(ns + "svg", {
+        "width": "400", "height": "488", "viewBox": "0 0 400 488", "role": "img"
+    })
+    ET.SubElement(combinado, ns + "title").text = "Estadísticas y lenguajes de GitHub"
+    for nombre, prefijo, y in (("stats", "s-", 18), ("languages", "l-", 260)):
+        pieza = ET.fromstring((carpeta / f"{nombre}-{tema}.svg").read_text(encoding="utf-8"))
+        pieza.set("x", "0")
+        pieza.set("y", str(y))
+        for elemento in pieza.iter():
+            if "id" in elemento.attrib:
+                elemento.set("id", prefijo + elemento.get("id"))
+            for clave, valor in list(elemento.attrib.items()):
+                if clave.endswith("href") and valor.startswith("#"):
+                    elemento.set(clave, "#" + prefijo + valor[1:])
+                elif "url(#" in valor:
+                    elemento.set(clave, valor.replace("url(#", "url(#" + prefijo))
+        combinado.append(pieza)
+    ET.ElementTree(combinado).write(carpeta / f"resumen-{tema}.svg", encoding="unicode")
