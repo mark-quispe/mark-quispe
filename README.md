@@ -1,8 +1,5 @@
 <p>
-  <img width="100%" src="./portada_video_grande.webp" alt="Mark Quispe. Computación Científica, UNMSM.">
-</p>
-
-<p>
+  <img width="100%" src="./portada_video_grande.webp" alt="Mark Quispe. Computación Científica, UNMSM."><br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/separador-proyectos-dark.svg">
   <img width="100%" src="./cards/separador-proyectos-light.svg" alt="Proyectos seleccionados">
