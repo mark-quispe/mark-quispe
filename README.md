@@ -16,13 +16,13 @@
 </p>
 <br clear="all">
 
-<p align="center">
-  <img align="left" width="20%" src="./art/girasol_ascii_compacto.webp" alt="Girasol dorado animado sostenido por una mano de armadura azul.">
-  <img align="right" width="21%" src="./art/rosa_ascii.webp" alt="Rosa blanca sostenida por una mano de armadura negra, animación ASCII.">
-  <a href="https://github.com/Gonriel-Labs/claude-plan-limits"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-plan-limits-dark.png"><img width="55%" src="./art/claude-plan-limits-light.png" alt="Claude Plan Limits: cuánto del plan has usado, cuándo se reinicia y cuánto costaría la sesión. Claude Code, TypeScript."></picture></a><br>
-  <a href="https://github.com/Gonriel-Labs/claude-chat-notes"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-chat-notes-dark.png"><img width="55%" src="./art/claude-chat-notes-light.png" alt="Claude Chat Notes: guarda fragmentos de las respuestas de Claude como notas ordenadas por tema. Claude Code, TypeScript."></picture></a>
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./art/claude_duo_dark.webp">
+    <img width="100%" src="./art/claude_duo_light.webp" alt="Claude Plan Limits y Claude Chat Notes, acompañados por un girasol y una rosa en ASCII animado.">
+  </picture>
 </p>
-<br clear="all">
+<p align="center"><sub><a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
 
 <p>
 <a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg"><img width="49%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub: commits, pull requests, repositorios y lenguajes"></picture></a>
