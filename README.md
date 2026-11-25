@@ -18,8 +18,8 @@
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./art/claude_duo_dark.webp">
-    <img width="100%" src="./art/claude_duo_light.webp" alt="Claude Plan Limits y Claude Chat Notes, acompañados por un girasol y una rosa en ASCII animado.">
+    <source media="(prefers-color-scheme: dark)" srcset="./art/claude_simetrico_dark.webp">
+    <img width="100%" src="./art/claude_simetrico_light.webp" alt="Claude Plan Limits y Claude Chat Notes, acompañados por un girasol y una rosa en ASCII animado.">
   </picture>
 </p>
 <p align="center"><sub><a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
