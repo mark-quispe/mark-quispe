@@ -1,8 +1,6 @@
+
 <p>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./art/portada-dark.png">
-  <img width="100%" src="./art/portada-light.png" alt="Mark Quispe. Computación Científica, UNMSM. Lima, Perú. Junto al cuadro «Un filósofo explicando el planetario», de Joseph Wright of Derby.">
-</picture>
+  <img width="100%" src="./portada_renacentista.gif" alt="Mark Quispe. Computación Científica, UNMSM.">
 </p>
 
 <p>
