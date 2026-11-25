@@ -1,23 +1,19 @@
 <p>
-  <img width="100%" src="./portada_mark_clasica.webp" alt="Mark - Quispe. Computación Científica, UNMSM."><br>
+  <img width="100%" src="./portada_mark_distribuida.webp" alt="Mark - Quispe. Computación Científica, UNMSM."><br>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/separador-proyectos-dark.svg">
   <img width="100%" src="./cards/separador-proyectos-light.svg" alt="Proyectos seleccionados">
 </picture>
 </p>
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_rectangular_dark.webp">
-    <img width="100%" src="./art/proyectos_rectangular_light.webp" alt="Proyectos seleccionados: Academic Search RAG, Gestión de Pedidos, Claude Plan Limits y Claude Chat Notes, entre la tormenta rectangular, el girasol y la rosa ASCII.">
-  </picture>
-</p>
 <p align="center"><sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
 
 <p>
-<a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg"><img width="49%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub: commits, pull requests, repositorios y lenguajes"></picture></a>
-<a href="https://github.com/mark-quispe?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg"><img width="49%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios"></picture></a>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_vertical_dark.webp"><img align="left" width="45%" src="./art/proyectos_vertical_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
+  <a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg"><img width="53%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub actualizadas automáticamente"></picture></a><br>
+  <a href="https://github.com/mark-quispe?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg"><img width="53%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios"></picture></a>
 </p>
+<br clear="all">
 
 <p>
 <picture>
