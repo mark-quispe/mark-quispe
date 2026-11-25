@@ -1,8 +1,11 @@
+<p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/portada-dark.png">
   <img width="100%" src="./art/portada-light.png" alt="Mark Quispe. Computación Científica, UNMSM. Lima, Perú. Junto al cuadro «Un filósofo explicando el planetario», de Joseph Wright of Derby.">
 </picture>
+</p>
 
+<p>
 <a href="https://github.com/mark-quispe#contributions">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg">
@@ -15,12 +18,16 @@
   <img width="49%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios">
 </picture>
 </a>
+</p>
 
+<p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/separador-proyectos-dark.svg">
   <img width="100%" src="./cards/separador-proyectos-light.svg" alt="Proyectos seleccionados">
 </picture>
+</p>
 
+<p>
 <a href="https://github.com/mark-quispe/Academic-Search-RAG">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/academic-search-rag-dark.png">
@@ -33,6 +40,9 @@
   <img width="49%" src="./art/gestion-pedidos-light.png" alt="Gestión de Pedidos, en desarrollo: registro y consulta de pedidos para un estudio de arquitectura. Web, PostgreSQL.">
 </picture>
 </a>
+</p>
+
+<p>
 <a href="https://github.com/Gonriel-Labs/claude-plan-limits">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/claude-plan-limits-dark.png">
@@ -45,16 +55,21 @@
   <img width="49%" src="./art/claude-chat-notes-light.png" alt="Claude Chat Notes: guarda fragmentos de las respuestas de Claude como notas ordenadas por tema. Claude Code, TypeScript.">
 </picture>
 </a>
+</p>
 
+<p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/actividad-dark.svg">
   <img width="100%" src="./cards/actividad-light.svg" alt="Actividad reciente en mis repositorios públicos y calendario de contribuciones de los últimos seis meses">
 </picture>
+</p>
 
+<p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/sobre-mi-dark.svg">
   <img width="100%" src="./cards/sobre-mi-light.svg" alt="Sobre mí: estoy reforzando Python y SQL para trabajar con datos. En mi tesis estudio cómo los retrasos en las intervenciones cambian la evolución del contagio financiero y las estrategias de control. Herramientas: Python, TypeScript, PostgreSQL, Neon, Vercel, Google Cloud, Git, LaTeX. Intereses: ingeniería de datos, modelado, sistemas web, RAG y LLM.">
 </picture>
+</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/mark-quispe-gonzales-839200382/">LinkedIn</a> · <a href="https://github.com/mark-quispe?tab=repositories">Repositorios</a>
