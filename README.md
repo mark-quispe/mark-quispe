@@ -1,14 +1,10 @@
-<p>
+<p align="center">
   <img width="100%" src="./portada_mark_ancho_timing.webp" alt="Mark - Quispe. Computación Científica, UNMSM."><br>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./cards/separador-proyectos-dark.svg">
-  <img width="100%" src="./cards/separador-proyectos-light.svg" alt="Proyectos seleccionados">
-</picture>
-</p>
-
-<p align="center"><sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
-
-<p align="center">
+  <source media="(prefers-color-scheme: dark)" srcset="./cards/separador-proyectos-compacto-dark.svg">
+  <img width="100%" src="./cards/separador-proyectos-compacto-light.svg" alt="Proyectos seleccionados">
+</picture><br>
+<sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_ascii_ampliados_dark.webp"><img width="49%" src="./art/proyectos_ascii_ampliados_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
 <a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/resumen-editorial-suave-dark.svg"><img width="49%" src="./cards/resumen-editorial-light.svg" alt="Estadísticas de GitHub y lenguajes más usados, actualizados automáticamente."></picture></a>
 </p>
