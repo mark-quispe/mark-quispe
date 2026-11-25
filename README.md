@@ -17,9 +17,9 @@
 <br clear="all">
 
 <p align="right">
-  <img align="left" width="44%" src="./art/girasol_ascii.webp" alt="Girasol dorado animado sostenido por una mano de armadura azul.">
-  <a href="https://github.com/Gonriel-Labs/claude-plan-limits"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-plan-limits-dark.png"><img width="53%" src="./art/claude-plan-limits-light.png" alt="Claude Plan Limits: cuánto del plan has usado, cuándo se reinicia y cuánto costaría la sesión. Claude Code, TypeScript."></picture></a><br>
-  <a href="https://github.com/Gonriel-Labs/claude-chat-notes"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-chat-notes-dark.png"><img width="53%" src="./art/claude-chat-notes-light.png" alt="Claude Chat Notes: guarda fragmentos de las respuestas de Claude como notas ordenadas por tema. Claude Code, TypeScript."></picture></a>
+  <img align="left" width="20%" src="./art/girasol_ascii_compacto.webp" alt="Girasol dorado animado sostenido por una mano de armadura azul.">
+  <a href="https://github.com/Gonriel-Labs/claude-plan-limits"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-plan-limits-dark.png"><img width="77%" src="./art/claude-plan-limits-light.png" alt="Claude Plan Limits: cuánto del plan has usado, cuándo se reinicia y cuánto costaría la sesión. Claude Code, TypeScript."></picture></a><br>
+  <a href="https://github.com/Gonriel-Labs/claude-chat-notes"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-chat-notes-dark.png"><img width="77%" src="./art/claude-chat-notes-light.png" alt="Claude Chat Notes: guarda fragmentos de las respuestas de Claude como notas ordenadas por tema. Claude Code, TypeScript."></picture></a>
 </p>
 <br clear="all">
 

@@ -69,8 +69,8 @@ def panel(w, h, t):
     img = Image.new("RGBA", (w * S, h * S), t["fondo"])
     m = Image.new("L", img.size, 0)
     ImageDraw.Draw(m).rounded_rectangle((18 * S, 18 * S, (w - 18) * S, (h - 18) * S),
-                                      radius=36 * S, fill=82)
-    m = m.filter(ImageFilter.GaussianBlur(23 * S))
+                                      radius=36 * S, fill=153)
+    m = m.filter(ImageFilter.GaussianBlur(20 * S))
     img.putalpha(m)
     return img, ImageDraw.Draw(img)
 
@@ -131,7 +131,7 @@ def portada(tema):
 
 def tarjeta(p, tema):
     t = TEMAS[tema]
-    W, H = 560, 220
+    W, H = (720 if p['archivo'].startswith('claude-') else 560), 220
     img, d = panel(W, H, t)
     pintura = Image.open(PINTURAS / f'{p["pintura"]}.jpg').convert("RGB")
     miniatura = recorte_cuadrado(pintura, p["centro"], p["lado"]).resize((172 * S, 172 * S), Image.LANCZOS)
