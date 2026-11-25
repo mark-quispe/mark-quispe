@@ -69,8 +69,8 @@ def panel(w, h, t):
     img = Image.new("RGBA", (w * S, h * S), t["fondo"])
     m = Image.new("L", img.size, 0)
     ImageDraw.Draw(m).rounded_rectangle((18 * S, 18 * S, (w - 18) * S, (h - 18) * S),
-                                      radius=36 * S, fill=220)
-    m = m.filter(ImageFilter.GaussianBlur(16 * S))
+                                      radius=36 * S, fill=82)
+    m = m.filter(ImageFilter.GaussianBlur(23 * S))
     img.putalpha(m)
     return img, ImageDraw.Draw(img)
 
@@ -138,7 +138,7 @@ def tarjeta(p, tema):
     # A softly blurred echo of the painting ties the vignette and text together.
     ambiente = miniatura.resize(img.size, Image.LANCZOS).filter(ImageFilter.GaussianBlur(45*S))
     ambiente = ImageEnhance.Color(ambiente).enhance(0.45).convert("RGBA")
-    ambiente.putalpha(img.getchannel("A").point(lambda a: int(a * 0.10)))
+    ambiente.putalpha(img.getchannel("A").point(lambda a: int(a * 0.07)))
     img = Image.alpha_composite(img, ambiente)
     # Blend the painted vignette into the ambient panel, rather than framing it.
     alpha = Image.new("L", miniatura.size, 0)
