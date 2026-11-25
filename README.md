@@ -1,5 +1,5 @@
 <p>
-  <img width="100%" src="./portada_video.webp" alt="Mark Quispe. Computación Científica, UNMSM.">
+  <img width="100%" src="./portada_video_grande.webp" alt="Mark Quispe. Computación Científica, UNMSM.">
 </p>
 
 <p>
