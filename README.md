@@ -11,8 +11,8 @@
 
 <p>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./cards/panel-datos-discreto-dark.svg">
-  <img width="100%" src="./cards/panel-datos-discreto-light.svg" alt="Lenguajes más usados, contribuciones, actividad reciente y estadísticas de GitHub; datos actualizados automáticamente.">
+  <source media="(prefers-color-scheme: dark)" srcset="./cards/panel-datos-columnas-dark.svg">
+  <img width="100%" src="./cards/panel-datos-columnas-light.svg" alt="Lenguajes más usados, contribuciones, actividad reciente y estadísticas de GitHub; datos actualizados automáticamente.">
 </picture>
 </p>
 
