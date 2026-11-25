@@ -144,19 +144,20 @@ def tarjeta_stats(t):
 
 
 def tarjeta_lenguajes(t):
+    tonos = {nombre: COLORES_LENGUAJES[i] for i, (nombre, _) in enumerate(lenguajes)}
     W, H = 400, 200
     partes = ['<defs><clipPath id="barra"><rect x="26" y="70" width="348" height="10" rx="5"/></clipPath></defs>'
               '<g clip-path="url(#barra)">']
     x = 26.0
     for nombre, size in lenguajes:
         w = 348 * size / total
-        partes.append(f'<rect x="{x:.2f}" y="70" width="{w:.2f}" height="10" fill="{colors[nombre]}"/>')
+        partes.append(f'<rect x="{x:.2f}" y="70" width="{w:.2f}" height="10" fill="{tonos[nombre]}"/>')
         x += w
     partes.append("</g>")
     for i, (nombre, size) in enumerate(lenguajes):
         cx, cy = 26 + (i % 2) * 180, 108 + (i // 2) * 24
         pct = f"{100 * size / total:.1f}".replace(".", ",") + " %"
-        partes.append(f'<rect x="{cx}" y="{cy - 10}" width="10" height="10" rx="2" fill="{colors[nombre]}"/>')
+        partes.append(f'<rect x="{cx}" y="{cy - 10}" width="10" height="10" rx="2" fill="{tonos[nombre]}"/>')
         partes.append(serif.path(nombre, cx + 17, cy, 16, t["texto"]))
         partes.append(serif.path(pct, cx + 160, cy, 15, t["suave"], "end"))
     if not lenguajes:
@@ -260,6 +261,15 @@ def tarjeta_sobre_mi(t):
     return svg(W, H, "Sobre mí", marco(W, H, t) + "".join(partes))
 
 
+# Paleta exclusiva de las estadísticas; no modifica las otras piezas del perfil.
+PALETA_ESTADISTICAS = {"dark":{"#15191e":"#1b1e23","#30363d":"#363b42","#eee4d6":"#e5e1da","#c8c4c1":"#c8b89a","#92979e":"#a6a9af","#cc514d":"#bd5357","#c8ad8f":"#bd5357","#21262d":"#21262d","#4a1d1b":"#4a2529","#7a2523":"#73383e","#a52f2b":"#a5464b","#d0453a":"#d26869"},"light":{"#f3f1ed":"#f1efeb","#d0d7de":"#d8d2c8","#29221f":"#342c25","#42464a":"#51493d","#656d76":"#62666c","#a23836":"#a33b43","#84664d":"#a33b43","#ebedf0":"#e8e5e1","#e7b3a6":"#e9bec0","#cf7a6c":"#cb878d","#b0463e":"#ac515a"}}
+COLORES_LENGUAJES = ["#c8b89a","#819b9b","#b58a57","#a194b0","#758aa3","#8f9092"]
+
+def paleta_estadisticas(tema, paleta):
+    mapa = PALETA_ESTADISTICAS[tema]
+    return {k: [mapa.get(c, c) for c in v] if isinstance(v, list) else mapa.get(v, v)
+            for k, v in paleta.items()}
+
 PIEZAS = {
     "stats": tarjeta_stats,
     "languages": tarjeta_lenguajes,
@@ -272,7 +282,7 @@ carpeta = Path("cards")
 carpeta.mkdir(exist_ok=True)
 for nombre, crear in PIEZAS.items():
     for tema, paleta in TEMAS.items():
-        contenido = crear(paleta)
+        contenido = crear(paleta_estadisticas(tema, paleta) if nombre in {'stats', 'languages', 'actividad'} else paleta)
         ET.fromstring(contenido)  # falla si el SVG quedó mal formado
         (carpeta / f"{nombre}-{tema}.svg").write_text(contenido, encoding="utf-8")
 
