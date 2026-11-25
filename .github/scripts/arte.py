@@ -10,7 +10,7 @@ panteon.jpg (ver CREDITOS.md). Necesita Pillow.
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageFilter, ImageChops
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from estilo import FUENTES, TEMAS  # noqa: E402
@@ -65,14 +65,14 @@ def recorte_cuadrado(img, centro, lado):
 
 
 def panel(w, h, t):
-    img = Image.new("RGBA", (w * S, h * S), (0, 0, 0, 0))
-    d = ImageDraw.Draw(img)
-    d.rounded_rectangle((S, S, w * S - S, h * S - S), radius=6 * S, fill=t["fondo"],
-                        outline=t["borde"], width=int(1.5 * S))
-    for x, y in [(8, 8), (w - 8, 8), (8, h - 8), (w - 8, h - 8)]:
-        d.polygon([(x * S, (y - 4) * S), ((x + 4) * S, y * S), (x * S, (y + 4) * S), ((x - 4) * S, y * S)],
-                  fill=t["oro"])
-    return img, d
+    # Soft ambient tint, fading to transparent at all four edges.
+    img = Image.new("RGBA", (w * S, h * S), t["fondo"])
+    m = Image.new("L", img.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle((18 * S, 18 * S, (w - 18) * S, (h - 18) * S),
+                                      radius=36 * S, fill=220)
+    m = m.filter(ImageFilter.GaussianBlur(16 * S))
+    img.putalpha(m)
+    return img, ImageDraw.Draw(img)
 
 
 def texto_partido(d, texto, fuente, ancho_max):
@@ -126,10 +126,6 @@ def portada(tema):
     d.text((44 * S, 200 * S), "Computación Científica · UNMSM", font=letra(24, 400, True),
            fill=t["texto"], anchor="ls")
     d.text((44 * S, 228 * S), "Lima, Perú", font=letra(16, 400, True), fill=t["suave"], anchor="ls")
-    # Rombos de las esquinas por encima de la pintura
-    for x, y in [(W - 8, 8), (W - 8, H - 8)]:
-        d.polygon([(x * S, (y - 4) * S), ((x + 4) * S, y * S), (x * S, (y + 4) * S), ((x - 4) * S, y * S)],
-                  fill=t["oro"])
     return img
 
 
@@ -139,8 +135,20 @@ def tarjeta(p, tema):
     img, d = panel(W, H, t)
     pintura = Image.open(PINTURAS / f'{p["pintura"]}.jpg').convert("RGB")
     miniatura = recorte_cuadrado(pintura, p["centro"], p["lado"]).resize((172 * S, 172 * S), Image.LANCZOS)
-    img.paste(miniatura, (24 * S, 24 * S))
-    d.rectangle((24 * S, 24 * S, 196 * S, 196 * S), outline=t["borde"], width=S)
+    # A softly blurred echo of the painting ties the vignette and text together.
+    ambiente = miniatura.resize(img.size, Image.LANCZOS).filter(ImageFilter.GaussianBlur(45*S))
+    ambiente = ImageEnhance.Color(ambiente).enhance(0.45).convert("RGBA")
+    ambiente.putalpha(img.getchannel("A").point(lambda a: int(a * 0.10)))
+    img = Image.alpha_composite(img, ambiente)
+    # Blend the painted vignette into the ambient panel, rather than framing it.
+    alpha = Image.new("L", miniatura.size, 0)
+    ImageDraw.Draw(alpha).rounded_rectangle((12*S, 12*S, 160*S, 160*S), radius=20*S, fill=255)
+    alpha = alpha.filter(ImageFilter.GaussianBlur(11*S))
+    miniatura = ImageEnhance.Color(miniatura).enhance(0.78)
+    miniatura = miniatura.convert("RGBA")
+    miniatura.putalpha(alpha)
+    img.alpha_composite(miniatura, (24*S, 24*S))
+    d = ImageDraw.Draw(img)
     x = 220
     titulo = letra(25, 600)
     d.text((x * S, 58 * S), p["titulo"], font=titulo, fill=t["titulo"], anchor="ls")
@@ -148,7 +156,7 @@ def tarjeta(p, tema):
         fx = x * S + d.textlength(p["titulo"], font=titulo) + 12 * S
         f = letra(12.5, 500)
         ancho = d.textlength(p["estado"], font=f) + 16 * S
-        d.rounded_rectangle((fx, 40 * S, fx + ancho, 60 * S), radius=4 * S, outline=t["acento"], width=S)
+        d.rounded_rectangle((fx, 40 * S, fx + ancho, 60 * S), radius=8 * S, fill=t["chip"])
         d.text((fx + 8 * S, 54.5 * S), p["estado"], font=f, fill=t["acento"], anchor="ls")
     # Icono de enlace externo
     ix, iy = W - 40, 26
@@ -166,7 +174,7 @@ def tarjeta(p, tema):
     for chip in p["chips"]:
         ancho = d.textlength(chip, font=f) / S + 22
         d.rounded_rectangle((cx * S, 166 * S, (cx + ancho) * S, 192 * S), radius=13 * S,
-                            fill=t["chip"], outline=t["borde"], width=S)
+                            fill=t["chip"])
         d.text(((cx + 11) * S, 184 * S), chip, font=f, fill=t["texto"], anchor="ls")
         cx += ancho + 8
     return img

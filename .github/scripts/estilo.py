@@ -16,14 +16,14 @@ GLIFOS = {}  # glifos usados en el SVG que se está armando
 
 TEMAS = {
     "dark": {
-        "fondo": "#15100e", "borde": "#7d5238", "titulo": "#efe3cc", "texto": "#d9ccb6",
-        "suave": "#a3937f", "acento": "#b8322f", "oro": "#c9a46a", "chip": "#2a1f1a",
-        "vacio": "#241b17", "escala": ["#4a1d1b", "#7a2523", "#a52f2b", "#d0453a"],
+        "fondo": "#15191e", "borde": "#30363d", "titulo": "#eee4d6", "texto": "#c8c4c1",
+        "suave": "#92979e", "acento": "#cc514d", "oro": "#c8ad8f", "chip": "#20252b",
+        "vacio": "#21262d", "escala": ["#4a1d1b", "#7a2523", "#a52f2b", "#d0453a"],
     },
     "light": {
-        "fondo": "#f5eddd", "borde": "#a77b56", "titulo": "#2a1d17", "texto": "#3b2d25",
-        "suave": "#6f5f51", "acento": "#8e1d22", "oro": "#8a6a3a", "chip": "#ebdfc8",
-        "vacio": "#e6dac4", "escala": ["#e7b3a6", "#cf7a6c", "#b0463e", "#8e1d22"],
+        "fondo": "#f3f1ed", "borde": "#d0d7de", "titulo": "#29221f", "texto": "#42464a",
+        "suave": "#656d76", "acento": "#a23836", "oro": "#84664d", "chip": "#eaeef2",
+        "vacio": "#ebedf0", "escala": ["#e7b3a6", "#cf7a6c", "#b0463e", "#a23836"],
     },
 }
 
@@ -87,14 +87,13 @@ def fuente(peso=400, cursiva=False):
 
 
 def marco(ancho, alto, t):
-    """Panel con borde cobrizo y pequeños rombos en las esquinas."""
-    rombos = "".join(
-        f'<path fill="{t["oro"]}" d="M{x} {y - 4}L{x + 4} {y}L{x} {y + 4}L{x - 4} {y}Z"/>'
-        for x, y in [(8, 8), (ancho - 8, 8), (8, alto - 8), (ancho - 8, alto - 8)]
-    )
+    """Sombra ambiental suave; bordes completamente transparentes."""
     return (
-        f'<rect x="1" y="1" width="{ancho - 2}" height="{alto - 2}" rx="6" fill="{t["fondo"]}" '
-        f'stroke="{t["borde"]}" stroke-width="1.5"/>{rombos}'
+        f'<defs><radialGradient id="ambiente" cx="50%" cy="50%" r="50%">'
+        f'<stop offset="0%" stop-color="{t["fondo"]}" stop-opacity="0.85"/>'
+        f'<stop offset="55%" stop-color="{t["fondo"]}" stop-opacity="0.55"/>'
+        f'<stop offset="100%" stop-color="{t["fondo"]}" stop-opacity="0"/>'
+        f'</radialGradient></defs><rect width="{ancho}" height="{alto}" fill="url(#ambiente)"/>'
     )
 
 
