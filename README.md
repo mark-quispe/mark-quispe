@@ -6,13 +6,13 @@
 </picture><br>
 <sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub><br>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_ascii_tormenta_dark.webp"><img width="49%" src="./art/proyectos_ascii_tormenta_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
-<a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/resumen-acanthus-dark.svg"><img width="49%" src="./cards/resumen-acanthus-light.svg" alt="Estadísticas de GitHub y lenguajes más usados, actualizados automáticamente."></picture></a>
+<img width="49%" src="./art/rey_ascii_animado.webp" alt="Rey esqueleto ASCII con halo dorado animado.">
 </p>
 
 <p>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./cards/actividad-dark.svg">
-  <img width="100%" src="./cards/actividad-light.svg" alt="Actividad reciente en mis repositorios públicos y calendario de contribuciones de los últimos seis meses">
+  <source media="(prefers-color-scheme: dark)" srcset="./cards/panel-datos-dark.svg">
+  <img width="100%" src="./cards/panel-datos-light.svg" alt="Lenguajes más usados, contribuciones, actividad reciente y estadísticas de GitHub; datos actualizados automáticamente.">
 </picture>
 </p>
 
