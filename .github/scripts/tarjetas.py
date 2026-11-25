@@ -231,7 +231,7 @@ def tarjeta_actividad(t):
 
 def separador(texto):
     def pieza(t):
-        W, H = 830, 46
+        W, H = 830, 28
         ancho = negrita.ancho(texto, 15, espaciado=6)
         x1, x2 = (W - ancho) / 2 - 26, (W + ancho) / 2 + 26
         cuerpo = (
@@ -297,7 +297,7 @@ PIEZAS = {
     "stats": tarjeta_stats,
     "languages": tarjeta_lenguajes,
     "actividad": tarjeta_actividad,
-    "separador-proyectos": separador("PROYECTOS SELECCIONADOS"),
+    "separador-proyectos-compacto": separador("PROYECTOS SELECCIONADOS"),
     "sobre-mi": tarjeta_sobre_mi,
 }
 
