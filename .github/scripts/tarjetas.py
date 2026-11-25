@@ -334,4 +334,4 @@ for tema in TEMAS:
                 elif "url(#" in valor:
                     elemento.set(clave, valor.replace("url(#", "url(#" + prefijo))
         combinado.append(pieza)
-    ET.ElementTree(combinado).write(carpeta / f"resumen-{tema}.svg", encoding="unicode")
+    ET.ElementTree(combinado).write(carpeta / f"resumen-editorial-{tema}.svg", encoding="unicode")
