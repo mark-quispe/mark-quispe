@@ -185,13 +185,17 @@ def tarjeta_actividad(t):
     partes = [marco(W, H, t), titulo("Actividad reciente", 28, 42, t, 360)]
     for i, item in enumerate(recientes):
         repo = item["repository"]
-        y = 92 + i * 40
+        x = 28 + (i % 2) * 188
+        y = 92 + (i // 2) * 65
         n = item["contributions"]["totalCount"]
-        partes.append(rombo(34, y - 5, 3.5, t["acento"]))
-        partes.append(serif.path(repo["name"], 48, y, 17.5, t["titulo"]))
+        nombre = repo["name"]
+        tam = min(16, 164 * 16 / max(1, serif.ancho(nombre, 16)))
+        partes.append(rombo(x + 3, y - 5, 3, t["acento"]))
+        partes.append(serif.path(nombre, x + 14, y, tam, t["titulo"]))
         meta = (f'{repo["primaryLanguage"]["name"]} · {n} commit{"s" if n != 1 else ""}'
                 f' · {fecha_corta(repo["pushedAt"])}')
-        partes.append(cursiva.path(meta, 48, y + 18, 13.5, t["suave"]))
+        tam_meta = min(12.5, 164 * 12.5 / max(1, cursiva.ancho(meta, 12.5)))
+        partes.append(cursiva.path(meta, x + 14, y + 17, tam_meta, t["suave"]))
     if not recientes:
         partes.append(cursiva.path("Sin actividad pública reciente", 48, 92, 15, t["suave"]))
 
@@ -351,4 +355,4 @@ for tema in TEMAS:
                 elif "url(#" in valor:
                     elemento.set(clave, valor.replace("url(#", "url(#" + prefijo))
         panel.append(pieza)
-    ET.ElementTree(panel).write(carpeta / f"panel-datos-discreto-{tema}.svg", encoding="unicode")
+    ET.ElementTree(panel).write(carpeta / f"panel-datos-columnas-{tema}.svg", encoding="unicode")
