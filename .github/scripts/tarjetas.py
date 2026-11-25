@@ -92,13 +92,17 @@ if len(sizes) > 5:
     lenguajes.append(("Otros", total - sum(s for _, s in lenguajes)))
     colors["Otros"] = "#8a7d70"
 
-recientes = [
+publicos_recientes = [
     item for item in contrib["commitContributionsByRepository"]
-    if not item["repository"]["isPrivate"] and not item["repository"]["isFork"]
-    and item["repository"]["primaryLanguage"]
+    if not item["repository"]["isPrivate"]
+]
+publicos_recientes.sort(key=lambda item: item["repository"]["pushedAt"], reverse=True)
+recientes = [
+    item for item in publicos_recientes
+    if not item["repository"]["isFork"] and item["repository"]["primaryLanguage"]
     and item["repository"]["nameWithOwner"].lower() != f"{PROFILE}/{PROFILE}".lower()
 ]
-recientes.sort(key=lambda item: item["repository"]["pushedAt"], reverse=True)
+recientes += [item for item in publicos_recientes if item not in recientes]
 recientes = recientes[:6]
 
 dias = [d for w in contrib["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
@@ -192,7 +196,7 @@ def tarjeta_actividad(t):
         tam = min(16, 164 * 16 / max(1, serif.ancho(nombre, 16)))
         partes.append(rombo(x + 3, y - 5, 3, t["acento"]))
         partes.append(serif.path(nombre, x + 14, y, tam, t["titulo"]))
-        meta = (f'{repo["primaryLanguage"]["name"]} · {n} commit{"s" if n != 1 else ""}'
+        meta = (f'{(repo["primaryLanguage"] or {"name": "Sin lenguaje"})["name"]} · {n} commit{"s" if n != 1 else ""}'
                 f' · {fecha_corta(repo["pushedAt"])}')
         tam_meta = min(12.5, 164 * 12.5 / max(1, cursiva.ancho(meta, 12.5)))
         partes.append(cursiva.path(meta, x + 14, y + 17, tam_meta, t["suave"]))
