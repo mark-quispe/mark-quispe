@@ -131,7 +131,7 @@ def portada(tema):
 
 def tarjeta(p, tema):
     t = TEMAS[tema]
-    W, H = (720 if p['archivo'].startswith('claude-') else 560), 220
+    W, H = 560, 220
     img, d = panel(W, H, t)
     pintura = Image.open(PINTURAS / f'{p["pintura"]}.jpg').convert("RGB")
     miniatura = recorte_cuadrado(pintura, p["centro"], p["lado"]).resize((172 * S, 172 * S), Image.LANCZOS)
