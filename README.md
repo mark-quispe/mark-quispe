@@ -6,13 +6,11 @@
 </p>
 
 <p>
-<a href="https://github.com/mark-quispe#contributions">
-<picture>
+<a href="https://github.com/mark-quispe#contributions"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg">
   <img width="49%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub: commits, pull requests, repositorios y lenguajes">
 </picture></a>
-<a href="https://github.com/mark-quispe?tab=repositories">
-<picture>
+<a href="https://github.com/mark-quispe?tab=repositories"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./cards/languages-dark.svg">
   <img width="49%" src="./cards/languages-light.svg" alt="Lenguajes más usados en mis repositorios">
 </picture></a>
@@ -26,26 +24,22 @@
 </p>
 
 <p>
-<a href="https://github.com/mark-quispe/Academic-Search-RAG">
-<picture>
+<a href="https://github.com/mark-quispe/Academic-Search-RAG"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/academic-search-rag-dark.png">
   <img width="49%" src="./art/academic-search-rag-light.png" alt="Academic Search RAG: API grupal que consulta las mallas curriculares de la UNMSM y cita sus fuentes. Python, FastAPI, RAG.">
 </picture></a>
-<a href="https://github.com/mark-quispe/GESTION-PEDIDOS">
-<picture>
+<a href="https://github.com/mark-quispe/GESTION-PEDIDOS"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/gestion-pedidos-dark.png">
   <img width="49%" src="./art/gestion-pedidos-light.png" alt="Gestión de Pedidos, en desarrollo: registro y consulta de pedidos para un estudio de arquitectura. Web, PostgreSQL.">
 </picture></a>
 </p>
 
 <p>
-<a href="https://github.com/Gonriel-Labs/claude-plan-limits">
-<picture>
+<a href="https://github.com/Gonriel-Labs/claude-plan-limits"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/claude-plan-limits-dark.png">
   <img width="49%" src="./art/claude-plan-limits-light.png" alt="Claude Plan Limits: cuánto del plan has usado, cuándo se reinicia y cuánto costaría la sesión. Claude Code, TypeScript.">
 </picture></a>
-<a href="https://github.com/Gonriel-Labs/claude-chat-notes">
-<picture>
+<a href="https://github.com/Gonriel-Labs/claude-chat-notes"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./art/claude-chat-notes-dark.png">
   <img width="49%" src="./art/claude-chat-notes-light.png" alt="Claude Chat Notes: guarda fragmentos de las respuestas de Claude como notas ordenadas por tema. Claude Code, TypeScript.">
 </picture></a>
