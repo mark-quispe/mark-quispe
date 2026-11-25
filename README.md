@@ -1,6 +1,6 @@
 
 <p>
-  <img width="100%" src="./portada_renacentista.gif" alt="Mark Quispe. Computación Científica, UNMSM.">
+  <img width="100%" src="./portada_mimetizada.webp" alt="Mark Quispe. Computación Científica, UNMSM.">
 </p>
 
 <p>
