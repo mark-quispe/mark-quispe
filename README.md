@@ -10,9 +10,14 @@
 </p>
 
 <p>
-  <img align="right" width="44%" src="./art/tormenta_ascii_ancha.webp" alt="Tormenta animada en arte ASCII: esqueleto, relámpagos y flores carmesí.">
+  <img align="right" width="44%" src="./art/tormenta_ascii_duo.webp" alt="Tormenta ASCII animada con relámpagos y lluvia.">
   <a href="https://github.com/mark-quispe/Academic-Search-RAG"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/academic-search-rag-dark.png"><img width="53%" src="./art/academic-search-rag-light.png" alt="Academic Search RAG: API grupal que consulta las mallas curriculares de la UNMSM y cita sus fuentes. Python, FastAPI, RAG."></picture></a><br>
-  <a href="https://github.com/mark-quispe/GESTION-PEDIDOS"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/gestion-pedidos-dark.png"><img width="53%" src="./art/gestion-pedidos-light.png" alt="Gestión de Pedidos, en desarrollo: registro y consulta de pedidos para un estudio de arquitectura. Web, PostgreSQL."></picture></a><br>
+  <a href="https://github.com/mark-quispe/GESTION-PEDIDOS"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/gestion-pedidos-dark.png"><img width="53%" src="./art/gestion-pedidos-light.png" alt="Gestión de Pedidos, en desarrollo: registro y consulta de pedidos para un estudio de arquitectura. Web, PostgreSQL."></picture></a>
+</p>
+<br clear="all">
+
+<p align="right">
+  <img align="left" width="44%" src="./art/girasol_ascii.webp" alt="Girasol dorado animado sostenido por una mano de armadura azul.">
   <a href="https://github.com/Gonriel-Labs/claude-plan-limits"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-plan-limits-dark.png"><img width="53%" src="./art/claude-plan-limits-light.png" alt="Claude Plan Limits: cuánto del plan has usado, cuándo se reinicia y cuánto costaría la sesión. Claude Code, TypeScript."></picture></a><br>
   <a href="https://github.com/Gonriel-Labs/claude-chat-notes"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/claude-chat-notes-dark.png"><img width="53%" src="./art/claude-chat-notes-light.png" alt="Claude Chat Notes: guarda fragmentos de las respuestas de Claude como notas ordenadas por tema. Claude Code, TypeScript."></picture></a>
 </p>
