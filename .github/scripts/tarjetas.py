@@ -305,7 +305,10 @@ carpeta = Path("cards")
 carpeta.mkdir(exist_ok=True)
 for nombre, crear in PIEZAS.items():
     for tema, paleta in TEMAS.items():
-        contenido = crear(paleta_estadisticas(tema, paleta) if nombre in {'stats', 'languages', 'actividad'} else paleta)
+        colores = paleta_estadisticas(tema, paleta) if nombre in {'stats', 'languages', 'actividad'} else paleta
+        if tema == 'dark' and nombre in {'stats', 'languages'}:
+            colores = {**colores, 'fondo': '#15191e'}
+        contenido = crear(colores)
         ET.fromstring(contenido)  # falla si el SVG quedó mal formado
         (carpeta / f"{nombre}-{tema}.svg").write_text(contenido, encoding="utf-8")
 
@@ -334,4 +337,4 @@ for tema in TEMAS:
                 elif "url(#" in valor:
                     elemento.set(clave, valor.replace("url(#", "url(#" + prefijo))
         combinado.append(pieza)
-    ET.ElementTree(combinado).write(carpeta / f"resumen-editorial-{tema}.svg", encoding="unicode")
+    ET.ElementTree(combinado).write(carpeta / (f"resumen-editorial-{tema}.svg" if tema != "dark" else "resumen-editorial-suave-dark.svg"), encoding="unicode")
