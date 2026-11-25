@@ -133,14 +133,27 @@ def rombo(x, y, r, color):
 # --- Piezas -------------------------------------------------------------------
 def tarjeta_stats(t):
     W, H = 400, 200
-    filas = []
-    for i, (label, value) in enumerate(estadisticas):
-        y = 82 + i * 25
-        filas.append(rombo(32, y - 5, 3.5, t["oro"]))
-        filas.append(serif.path(label, 46, y, 16.5, t["texto"]))
-        filas.append(negrita.path(f"{value:,}".replace(",", " "), W - 28, y, 17, t["titulo"], "end"))
-    return svg(W, H, "Estadísticas de GitHub",
-               marco(W, H, t) + titulo("Estadísticas de GitHub", 26, 40, t, W - 52) + "".join(filas))
+    cuerpo = [marco(W, H, t)]
+    cuerpo.append(negrita.path("Estadísticas de GitHub", 23, 27, 20, t["titulo"]))
+    cuerpo.append(rombo(374, 21, 4, t["acento"]))
+    cuerpo.append(f'<path d="M23 37H377" stroke="{t["borde"]}" stroke-width="1"/>')
+    cuerpo.append(f'<path d="M200 49V112M23 120H377M142 130V186M258 130V186" stroke="{t["borde"]}" stroke-width=".8" opacity=".8"/>')
+    # Line icons: commit history and pull request.
+    cuerpo.append(f'<g fill="none" stroke="{t["acento"]}" stroke-width="1.5"><path d="M27 57H47"/><circle cx="37" cy="57" r="4" fill="{t["fondo"]}"/><path d="M218 51V66M218 56Q232 56 232 66"/><circle cx="218" cy="51" r="2.4" fill="{t["fondo"]}"/><circle cx="218" cy="66" r="2.4" fill="{t["fondo"]}"/><circle cx="232" cy="66" r="2.4" fill="{t["fondo"]}"/></g>')
+    for x, label, value in [(26, "Commits", estadisticas[0][1]), (215, "Pull requests", estadisticas[1][1])]:
+        cuerpo.append(negrita.path(f"{value:,}".replace(",", " "), x + 30, 85, 37, t["titulo"]))
+        cuerpo.append(serif.path(label, x, 101, 14, t["texto"]))
+        cuerpo.append(serif.path("Último año", x, 113, 10.5, t["suave"]))
+    for x, value, labels in [
+        (26, estadisticas[2][1], ("Repositorios", "con commits")),
+        (154, estadisticas[3][1], ("Repositorios", alcance)),
+        (270, estadisticas[4][1], ("Lenguajes", "usados")),
+    ]:
+        cuerpo.append(rombo(x+3, 140, 3, t["acento"]))
+        cuerpo.append(negrita.path(f"{value:,}".replace(",", " "), x+13, 152, 27, t["titulo"]))
+        cuerpo.append(serif.path(labels[0], x, 169, 13, t["texto"]))
+        cuerpo.append(serif.path(labels[1], x, 182, 11.5, t["suave"]))
+    return svg(W, H, "Estadísticas de GitHub", "".join(cuerpo))
 
 
 def tarjeta_lenguajes(t):
