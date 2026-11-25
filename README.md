@@ -5,8 +5,8 @@
   <img width="100%" src="./cards/separador-proyectos-compacto-light.svg" alt="Proyectos seleccionados">
 </picture><br>
 <sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub><br>
-<picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_ascii_puno_dark.webp"><img width="49%" src="./art/proyectos_ascii_puno_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
-<img width="49%" src="./art/rey_ascii_malabar.webp" alt="Rey esqueleto ASCII lanzando y atrapando el cráneo, con halo dorado animado.">
+<picture><source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_ascii_tormenta_dark.webp"><img width="49%" src="./art/proyectos_ascii_tormenta_light.webp" alt="Los cuatro proyectos seleccionados, acompañados por la tormenta y la rosa ASCII."></picture>
+<img width="49%" src="./art/rey_ascii_aureola.webp" alt="Rey esqueleto ASCII lanzando y atrapando el cráneo, con halo dorado animado.">
 </p>
 
 <p>
