@@ -99,7 +99,7 @@ recientes = [
     and item["repository"]["nameWithOwner"].lower() != f"{PROFILE}/{PROFILE}".lower()
 ]
 recientes.sort(key=lambda item: item["repository"]["pushedAt"], reverse=True)
-recientes = recientes[:4]
+recientes = recientes[:6]
 
 dias = [d for w in contrib["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
 semanas = contrib["contributionCalendar"]["weeks"][-26:]
@@ -186,7 +186,7 @@ def tarjeta_actividad(t):
     for i, item in enumerate(recientes):
         repo = item["repository"]
         x = 28 + (i % 2) * 188
-        y = 92 + (i // 2) * 65
+        y = 86 + (i // 2) * 59
         n = item["contributions"]["totalCount"]
         nombre = repo["name"]
         tam = min(16, 164 * 16 / max(1, serif.ancho(nombre, 16)))
@@ -355,4 +355,4 @@ for tema in TEMAS:
                 elif "url(#" in valor:
                     elemento.set(clave, valor.replace("url(#", "url(#" + prefijo))
         panel.append(pieza)
-    ET.ElementTree(panel).write(carpeta / f"panel-datos-columnas-{tema}.svg", encoding="unicode")
+    ET.ElementTree(panel).write(carpeta / f"panel-datos-seis-{tema}.svg", encoding="unicode")
