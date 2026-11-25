@@ -7,19 +7,12 @@
 </p>
 
 <p>
-  <img align="right" width="44%" src="./art/tormenta_ascii_duo.webp" alt="Tormenta ASCII animada con relámpagos y lluvia.">
-  <a href="https://github.com/mark-quispe/Academic-Search-RAG"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/academic-search-rag-dark.png"><img width="53%" src="./art/academic-search-rag-light.png" alt="Academic Search RAG: API grupal que consulta las mallas curriculares de la UNMSM y cita sus fuentes. Python, FastAPI, RAG."></picture></a><br>
-  <a href="https://github.com/mark-quispe/GESTION-PEDIDOS"><picture><source media="(prefers-color-scheme: dark)" srcset="./art/gestion-pedidos-dark.png"><img width="53%" src="./art/gestion-pedidos-light.png" alt="Gestión de Pedidos, en desarrollo: registro y consulta de pedidos para un estudio de arquitectura. Web, PostgreSQL."></picture></a>
-</p>
-<br clear="all">
-
-<p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./art/claude_simetrico_dark.webp">
-    <img width="100%" src="./art/claude_simetrico_light.webp" alt="Claude Plan Limits y Claude Chat Notes, acompañados por un girasol y una rosa en ASCII animado.">
+    <source media="(prefers-color-scheme: dark)" srcset="./art/proyectos_rectangular_dark.webp">
+    <img width="100%" src="./art/proyectos_rectangular_light.webp" alt="Proyectos seleccionados: Academic Search RAG, Gestión de Pedidos, Claude Plan Limits y Claude Chat Notes, entre la tormenta rectangular, el girasol y la rosa ASCII.">
   </picture>
 </p>
-<p align="center"><sub><a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
+<p align="center"><sub><a href="https://github.com/mark-quispe/Academic-Search-RAG">Academic Search RAG</a> · <a href="https://github.com/mark-quispe/GESTION-PEDIDOS">Gestión de Pedidos</a> · <a href="https://github.com/Gonriel-Labs/claude-plan-limits">Claude Plan Limits</a> · <a href="https://github.com/Gonriel-Labs/claude-chat-notes">Claude Chat Notes</a></sub></p>
 
 <p>
 <a href="https://github.com/mark-quispe#contributions"><picture><source media="(prefers-color-scheme: dark)" srcset="./cards/stats-dark.svg"><img width="49%" src="./cards/stats-light.svg" alt="Estadísticas de GitHub: commits, pull requests, repositorios y lenguajes"></picture></a>
